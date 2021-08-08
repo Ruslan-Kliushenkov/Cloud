@@ -14,23 +14,14 @@ public class HibernateUtil {
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             try {
-
                 registry = new StandardServiceRegistryBuilder().configure().build();
-
-
                 MetadataSources sources = new MetadataSources(registry);
-
-
                 Metadata metadata = sources.getMetadataBuilder().build();
-
-
                 sessionFactory = metadata.getSessionFactoryBuilder().build();
 
             } catch (Exception e) {
                 e.printStackTrace();
-                if (registry != null) {
-                    StandardServiceRegistryBuilder.destroy(registry);
-                }
+                HibernateUtil.shutdown();
             }
         }
         return sessionFactory;

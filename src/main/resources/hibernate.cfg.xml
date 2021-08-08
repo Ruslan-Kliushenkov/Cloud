@@ -8,9 +8,13 @@
 
         <!-- JDBC Database connection settings -->
         <property name="connection.driver_class">org.postgresql.Driver</property>
-        <property name="connection.url">jdbc:postgresql://localhost:5432/alvl</property>
-        <property name="connection.username">postgres</property>
-        <property name="connection.password">ardismtb</property>
+        <property name="connection.url">jdbc:
+            postgres://bwfpvmbpyydqam:212f0a6d8f5749368e3a2baa9de15abbee8a7f172cf6ec7ea8df830bab048dab@ec2-54-158-232-223.compute-1.amazonaws.com:5432/d70pcui034k0bb
+        </property>
+
+
+        <property name="connection.username">bwfpvmbpyydqam</property>
+        <property name="connection.password">212f0a6d8f5749368e3a2baa9de15abbee8a7f172cf6ec7ea8df830bab048dab</property>
 
         <!-- JDBC connection pool settings ... using built-in test pool -->
         <property name="connection.pool_size">1</property>

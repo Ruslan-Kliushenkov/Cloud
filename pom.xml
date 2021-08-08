@@ -28,6 +28,12 @@
             <version>5.3.7.Final</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.3.4</version>
+        </dependency>
 
         <!-- API, java.xml.bind module -->
         <dependency>
