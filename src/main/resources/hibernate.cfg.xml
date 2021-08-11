@@ -8,12 +8,11 @@
 
         <!-- JDBC Database connection settings -->
         <property name="connection.driver_class">org.postgresql.Driver</property>
-        <property name="connection.url">jdbc:
-            postgres://bwfpvmbpyydqam:212f0a6d8f5749368e3a2baa9de15abbee8a7f172cf6ec7ea8df830bab048dab@ec2-54-158-232-223.compute-1.amazonaws.com:5432/d70pcui034k0bb
-        </property>
+        <property name="connection.url">jdbc:postgresql://ec2-54-158-232-223.compute-1.amazonaws.com:5432/d70pcui034k0bb?sslmode=require</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://ec2-54-158-232-223.compute-1.amazonaws.com:5432/d70pcui034k0bb?sslmode=require</property>
 
-
-        <property name="connection.username">bwfpvmbpyydqam</property>
+        <property name="connection.username">
+            bwfpvmbpyydqam</property>
         <property name="connection.password">212f0a6d8f5749368e3a2baa9de15abbee8a7f172cf6ec7ea8df830bab048dab</property>
 
         <!-- JDBC connection pool settings ... using built-in test pool -->
@@ -29,7 +28,7 @@
         <property name="current_session_context_class">thread</property>
 
         <!-- Drop and re-create the database schema on startup -->
-        <property name="hbm2ddl.auto">create-drop</property>
+        <property name="hbm2ddl.auto">update</property>
 
         <!-- dbcp connection pool configuration -->
         <property name="hibernate.dbcp.initialSize">5</property>
@@ -37,6 +36,8 @@
         <property name="hibernate.dbcp.maxIdle">10</property>
         <property name="hibernate.dbcp.minIdle">5</property>
         <property name="hibernate.dbcp.maxWaitMillis">-1</property>
+        <property name="hibernate.globally_quoted_identifiers">true</property>
+        <property name="hibernate.jdbc.batch_size">20</property>
 
         <mapping class="entities.Album" />
         <mapping class="entities.Artist" />
